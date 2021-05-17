@@ -11,7 +11,7 @@
             }
         .header{
             display:grid;
-            grid-template-columns:1fr 2fr 2fr;
+            grid-template-columns:1fr 1fr 5fr 2fr;
             background-color:#ddd;
             }
         .gbox2{
@@ -70,7 +70,8 @@
         .footer{
             display:flex;
             justify-content:space-evenly;
-             background-color:#bbb;
+             background-color:#ddd;
+             width:100%;
             }
         li:hover{
             color:blue;
@@ -125,15 +126,100 @@
 
 }
 
+        .sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #ddd; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
 
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #111;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #ddd;
+  color: #000;
+  padding: 0px 0px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #eee;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
 
 
 
 
     </style>
+
 </head>
 <body>
 <div class="header">
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Events</a>
+  <a href="#">Gift card</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+  <a href="#">FAQ's</a>
+  <a href="#">Orders</a>
+  <a href="#">Wishlist</a>
+  <a href="#">GST-IN</a>
+  <a href="#">Help</a>
+</div>
+
+
+</div>
+
+<div id="main">
+
+<div class="header"><button class="openbtn" onclick="openNav()">&#9776;</button>
+
     <div class="gbox1" align="right"><img src="henhead.png" width="100">
     </div>
     <div class="gbox2">
@@ -150,6 +236,7 @@
        </table>
     </div>
 </div>
+
 <br><br><br>
 <div class="box1" ><img src="hens.jpg" width="30%"></div>
 <br><br><br>
@@ -208,29 +295,23 @@
 
 
 <br><br><br>
+
+    
 <div class="footer">
-<div>
-    <ul>
-        <li>About</li>
-        <li>Contact</li>
-        <li>Service</li>
-    </ul>
+
 </div>
-<div>
-    <ul>
-        <li>Help</li>
-        <li>Order</li>
-        <li>Shopping Help</li>
-    </ul>
-</div>
-<div>
-    <ul>
-        <li>Gift card</li>
-        <li>Events</li>
-        <li>GST-IN</li>
-    </ul>
-</div>
-</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
 
 
 
