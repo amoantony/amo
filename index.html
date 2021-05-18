@@ -50,7 +50,7 @@
             }
         h1{font-family: 'Crimson Pro';}
         h3{font-family: 'Caveat';font-size: 22px;}
-        er{font-family: 'Kulim Park';}
+        er{font-family: 'Kulim Park';font-weight: bold;align:center;}
 
         .main{
             display:flex;
@@ -84,7 +84,8 @@
         .box1:hover{
              transform: scale(1.2);
              }
-
+        .plus{
+        float:right;margin-right:5%;}
         .footer{
             display:flex;
             justify-content:space-evenly;
@@ -217,8 +218,33 @@
             .sidebar a {font-size: 18px;}
              }
        .map{
-        display:grid;
-        grid-template-columns:1fr;
+            display:grid;
+            grid-template-columns:1fr;}
+       .accordion {
+            background-color: #ddd;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            font-family: 'Caveat';
+            font-size: 22px;
+            font-weight: bold;
+            }
+
+       .active, .accordion:hover {
+            background-color: #ccc;
+            }
+
+       .panel {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+            }
 
 
 
@@ -330,6 +356,23 @@
 
 <br><br><br>
 
+<button class="accordion">What we do? <div class="plus">+</div></button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus error impedit omnis perferendis praesentium quo totam veniam? Assumenda, culpa dignissimos esse facere ipsam laborum, nemo, optio provident repudiandae sapiente vel.</p>
+</div>
+
+<button class="accordion">Who are we? <div class="plus">+</div></button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque eius esse quae? Adipisci aperiam error fugiat laudantium rem repudiandae sit temporibus voluptatem! Doloremque est laborum minus ratione repellendus, repudiandae vitae.</p>
+</div>
+
+<button class="accordion">Our history <div class="plus">+</div></button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet at autem debitis deserunt dolor, dolorem, ex harum laboriosam maxime molestias nobis nulla quas quibusdam quis quos recusandae unde ut veritatis vero! Aperiam aut est iure quae repellendus, totam veniam.</p>
+</div>
+    <br>
+    <br>
+    <br>
 
 <div class="footer">
    <ul><h3>
@@ -355,6 +398,24 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
+}
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
 </script>
 
