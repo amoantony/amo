@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta property="og:image" content="http://example.com/logo.jpg">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1024">
-    <meta property="og:image:height" content="1024">
+
     <title>Kozhi Farm</title>
+    <link href='https://fonts.googleapis.com/css?family=Kulim Park' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Crimson Pro' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
     <link rel="icon" href="henhead.png" type="image/icon type">
@@ -33,17 +31,26 @@
            }
         td{
             padding:5px;
+            color: #818181;
+            padding:5px;
+            spacing:3px;
+            transition: 0.4s;
+            border-radius:10px;
+
 
             }
         td:hover{
+            color: #111;
             background-color:#eee;
+            -webkit-filter: invert(100%) !important;
+
             }
         .kfarm{
             line-height:.3;
             }
         h1{font-family: 'Crimson Pro';}
-        h3{font-family: 'Caveat';font-size: 22px;
-            }
+        h3{font-family: 'Caveat';font-size: 22px;}
+        er{font-family: 'Kulim Park';}
 
         .main{
             display:flex;
@@ -59,7 +66,7 @@
             background-color:#eee;
             display:flex;
             justify-content:space-around;
-            transition: transform .2s;
+            transition: transform .4s;
             }
         .boxa{
             background-color:#eee;
@@ -71,11 +78,11 @@
         .box1{
             display:flex;
             justify-content:center;
-            transition: transform .2s;
+            transition: transform .4s;
             }
 
         .box1:hover{
-             transform: scale(1.1);
+             transform: scale(1.2);
              }
 
         .footer{
@@ -83,9 +90,12 @@
             justify-content:space-evenly;
              background-color:#ddd;
              width:100%;
+
             }
+        li{color: #818181;
+        transition: 0.4s;}
         li:hover{
-            color:blue;
+            color: #111;
             text-decoration: underline;
             }
         ul{
@@ -133,15 +143,18 @@
             }
 
        .flip-card-front {
-            background-color: #bbb;
+            background-color: #ddd;
             color: black;
+            border-radius:5px;
+            border:1px solid #ddd;
 
             }
 
        .flip-card-back {
-            background-color:#bbb;
-            color: white;
+            background-color:#ddd;
+            color: black;
             transform: rotateY(180deg);
+            border-radius:5px;
 
             }
 
@@ -203,6 +216,9 @@
             .sidebar {padding-top: 15px;}
             .sidebar a {font-size: 18px;}
              }
+       .map{
+        display:grid;
+        grid-template-columns:1fr;
 
 
 
@@ -216,17 +232,17 @@
 
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Events</a>
-  <a href="#">Gift card</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
-  <a href="#">FAQ's</a>
   <a href="#">Orders</a>
   <a href="#">Wishlist</a>
-  <a href="#">GST-IN</a>
-  <a href="#">Help</a>
+  <a href="#">Events</a>
+  <a href="#">Gift card</a>
+  <a href="#">Services</a>
+
+  <a href="#">Clients</a>
+
+  <a href="#">FAQ's</a>
+
+
 </div>
 
 
@@ -239,15 +255,15 @@
     <div class="gbox1" align="right"><img src="henhead.png" width="100">
     </div>
     <div class="gbox2">
-        <div class="kfarm" ><h1>KozhiFarm</h1><h3>Rooster Energy</h3>
+        <div class="kfarm" ><h1>Kozhi Farm</h1><h3>Rooster Energy</h3>
         </div>
     </div>
     <div class="gbox3" align="right" >
        <table align="center" cellspacing="10px" >
        <tr align="right">
-       <td> <img src="call.png" width="30"> <br>Call<br></td>
-       <td><img src="chicken.png" width="30"><br>Breed</td>
-       <td><img src="info.png" width="30"><br>Info</td>
+       <td> <img src="call.png" width="30"><br><er>Call</er><br></td>
+       <td><img src="chicken.png" width="30"><br><er>Breed</er></td>
+       <td><img src="info.png" width="30"><br><er>Info</er></td>
        </tr>
        </table>
     </div>
@@ -268,8 +284,8 @@
         </div>
         <div class="flip-card-back">
             <h1>Naadan</h1>
-            <p>traditional curry</p>
-            <p>heritage friendly</p>
+            <p><h3>Traditional curry</p>
+            <p>Homely meals</h3></p>
         </div>
     </div>
 </div>
@@ -283,8 +299,8 @@
         </div>
         <div class="flip-card-back">
             <h1>Farm fresh</h1>
-            <p>bone less</p>
-            <p>for popcorn</p>
+            <p><h3>Bone less</p>
+            <p>For popcorn</h3></p>
         </div>
     </div>
 </div>
@@ -293,15 +309,14 @@
 <div class="flip-card">
     <div class="flip-card-inner">
         <div class="flip-card-front">
-            <div class="box">
-                <div class="box"><iframe width=60% height=100% src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.336705632021!2d76.2212659647988!3d10.552802942473566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7eee294575c5b%3A0xa0c698fda7999b88!2sgec%2C%20Pandikkavu%2C%20Thrissur%2C%20Kerala%20680009!5e0!3m2!1sen!2sin!4v1621193698452!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
-
+            <div class="map">
+                <div class="box"><br><iframe width=60% height=100% src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.336705632021!2d76.2212659647988!3d10.552802942473566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7eee294575c5b%3A0xa0c698fda7999b88!2sgec%2C%20Pandikkavu%2C%20Thrissur%2C%20Kerala%20680009!5e0!3m2!1sen!2sin!4v1621193698452!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+                <div class="box"><br><br><h3>Reach us<h3></h3></div>
             </div>
         </div>
         <div class="flip-card-back">
-            <h1>reach us</h1>
-            <p></p>
-            <p>ivh</p>
+             <div class="box"><iframe width=60% height=100% src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.336705632021!2d76.2212659647988!3d10.552802942473566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7eee294575c5b%3A0xa0c698fda7999b88!2sgec%2C%20Pandikkavu%2C%20Thrissur%2C%20Kerala%20680009!5e0!3m2!1sen!2sin!4v1621193698452!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+             <div class="box"><br><br><h3>Reach us<h3></h3></div>
         </div>
     </div>
 </div>
@@ -317,6 +332,17 @@
 
 
 <div class="footer">
+   <ul><h3>
+       <li>GST-Invoice</li>
+       <li>Documentation</li>
+       <li>Newsletter</li>
+   </ul></h3>
+    <ul><h3>
+        <li>About</li>
+       <li>Contact</li>
+       <li>Help</li>
+
+   </h3></ul>
 
 </div>
 
